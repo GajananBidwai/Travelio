@@ -27,9 +27,7 @@ struct WelcomeView: View {
             
             VStack {
                 Spacer()
-                NavigationLink {
-                    
-                } label: {
+                NavigationLink(destination: OnboardingView(), label: {
                     VStack {
                         Image(systemName: "arrow.right")
                             .resizable()
@@ -45,9 +43,7 @@ struct WelcomeView: View {
                     .shadow(radius: 50)
                     .padding(.bottom, 80)
                     .padding(.trailing, 30)
-                    
-                    
-                }
+                })
                 .frame(minWidth: 80, maxWidth: .infinity, minHeight: 80, maxHeight: .infinity, alignment: .bottomTrailing)
 
 

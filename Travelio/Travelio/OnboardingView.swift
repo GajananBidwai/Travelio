@@ -55,21 +55,23 @@ struct OnboardingView: View {
                 }
             }
         }
-        VStack {
-            Image(systemName: "arrow.right")
-                .resizable()
-                .scaledToFit()
-                .foregroundStyle(Color("green"))
-                .frame(width: 25, height: 25, alignment: .bottom)
-                .bold()
+        NavigationLink(destination: SignInView()) {
+            VStack {
+                Image(systemName: "arrow.right")
+                    .resizable()
+                    .scaledToFit()
+                    .foregroundColor(Color("green"))
+                    .frame(width: 20, height: 20)
+                    .bold()
+            }
+            .frame(width: 64, height: 64)
+            .background(colorScheme == .dark ? Color(.secondarySystemBackground) : Color(.systemBackground) )
+            .cornerRadius(84)
+            .shadow(color: .primary.opacity(Double(0.1)), radius: 30, x: 4, y: 16)
+            .scaleEffect(activeSlide == 2 ? 1 : 0)
+            .animation(.default, value: activeSlide)
         }
-        .frame(width: 84, height: 84)
-        .background(colorScheme == .dark ? Color(.secondarySystemBackground) : Color(.systemBackground) )
-        .cornerRadius(80)
-        .foregroundStyle(Color.white)
-        .shadow(radius: 50)
-        .padding(.bottom, 80)
-        .padding(.trailing, 30)
+        
     }
 }
 
