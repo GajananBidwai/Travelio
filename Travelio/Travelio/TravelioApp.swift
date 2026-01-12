@@ -13,6 +13,7 @@ struct TravelioApp: App {
         WindowGroup {
             NavigationStack {
                 WelcomeView()
+                    .environmentObject(TravelAppViewModel())
             }
             
         }
