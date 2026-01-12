@@ -25,3 +25,5 @@ AppStorage
 ModelContainer
 withAnimation
 PageTabViewStyle
+Date
+MultipleViews
